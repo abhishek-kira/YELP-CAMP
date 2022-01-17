@@ -110,8 +110,9 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render('error', { err })
 })
 
+const port=process.env.PORT || 3000;
 //Starting Server
-app.listen("8000",(req,res)=>
+app.listen(port,(req,res)=>
 {
-    console.log("Server on 8000");
+    console.log(`Server on ${port}`);
 })
